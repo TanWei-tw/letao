@@ -1,0 +1,114 @@
+@import "base.less";
+#main{
+    // padding-top: .45rem;
+    // padding-bottom: .45rem;
+
+// 导航区域
+#nav{
+   padding: .1rem;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            width: 33.33%;
+            list-style: none;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+// 轮播图区域
+#banner{
+    padding: .1rem;
+    display: flex;
+    .banner-left{
+        height: 2.3666rem;
+        flex: 2;
+        a{
+           font-size: 0;
+            
+            img{
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+    .banner-right{
+        flex: 1;
+        height: 2.3666rem;
+        a{
+            display: block;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+#brand{
+    padding:.1rem;
+  
+    .brand-titile{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .brand-content{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 25%;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+     
+    }
+}
+
+#manColumn,
+#exercise,
+#MsColumn{
+    padding:.1rem;
+  
+    .titile{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+  .content{
+        width: 100%;
+     ul{
+         width: 100%;
+         overflow: hidden;
+         li{
+             width: 50%;
+             float: left;
+             &:nth-child(1){
+                 border: 1px solid #ccc;
+             }
+             a.product{
+             display:block;
+              text-align: center;
+            
+              img{
+                  width: 100%;
+              }
+             }
+         }
+     }
+    }
+}
+}
