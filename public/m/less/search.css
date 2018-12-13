@@ -38,7 +38,6 @@ body {
   text-align: center;
   flex: 1;
   margin: 0;
-  color: #fff;
 }
 #header a {
   color: #fff;
@@ -92,41 +91,6 @@ body {
 #footer ul li a span {
   display: block;
 }
-.form-search {
-  display: flex;
-  padding: 10px;
-}
-.form-search .input-search {
-  flex: 1;
-  height: 0.34rem;
-  background-color: #fff;
-  border: 1px solid #006699;
-  text-align: left;
-  font-size: 0.14rem;
-  margin-bottom: 0;
-  border-radius: 0.06rem 0 0 0.06rem;
-}
-.form-search .btn-search {
-  width: 0.6rem;
-  height: 0.34rem;
-  background-color: #006699;
-  border-color: #006699;
-  border-radius: 0 0.06rem 0.06rem 0;
-}
-.product-box ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-.product-box ul li {
-  width: 50%;
-}
-.product-box ul li:nth-child(1) {
-  border: 1px solid #ccc;
-}
-.product-box ul li a.product {
-  display: block;
-  text-align: center;
-}
-.product-box ul li a.product img {
-  width: 100%;
+#main .search-history .mui-card .mui-card-header span {
+  font-size: .14rem;
 }

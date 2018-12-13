@@ -113,20 +113,20 @@ body {
   border-color: #006699;
   border-radius: 0 0.06rem 0.06rem 0;
 }
-.product-box ul {
+#main .title {
+  background-color: #ccc;
+}
+#main .title ul {
   display: flex;
-  flex-wrap: wrap;
+  height: .3rem;
 }
-.product-box ul li {
-  width: 50%;
+#main .title ul li {
+  width: 25%;
 }
-.product-box ul li:nth-child(1) {
-  border: 1px solid #ccc;
+#main .title ul li:nth-child(1) a {
+  color: red;
 }
-.product-box ul li a.product {
+#main .title ul li a {
   display: block;
   text-align: center;
-}
-.product-box ul li a.product img {
-  width: 100%;
 }

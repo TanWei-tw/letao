@@ -38,33 +38,80 @@ body {
   text-align: center;
   flex: 1;
   margin: 0;
+  color: #fff;
 }
 #header a {
+  color: #fff;
+}
+#header .fa-search {
   line-height: .45rem;
   text-align: center;
   position: absolute;
-  right: 10px;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+}
+#header .fa-arrow-left {
+  position: absolute;
+  left: 0px;
+  line-height: .45rem;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+}
+#header form {
+  padding-top: .03rem;
+  width: 100%;
+}
+#header input {
+  border-radius: .1rem;
+  width: 100%;
+  margin: 0;
 }
 #footer {
   width: 100vw;
-  height: .45rem;
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  z-index: 999;
+  height: 0.45rem;
   background-color: #006699;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
 }
-#footer a {
-  width: 25%;
-  text-align: center;
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25vw;
+}
+#footer ul li a {
   display: block;
   color: #fff;
-  padding-top: .085rem;
-  padding-bottom: .085rem;
+  text-align: center;
+  padding: 0.085rem;
 }
-#footer a span {
+#footer ul li a span {
   display: block;
+}
+.form-search {
+  display: flex;
+  padding: 10px;
+}
+.form-search .input-search {
+  flex: 1;
+  height: 0.34rem;
+  background-color: #fff;
+  border: 1px solid #006699;
+  text-align: left;
+  font-size: 0.14rem;
+  margin-bottom: 0;
+  border-radius: 0.06rem 0 0 0.06rem;
+}
+.form-search .btn-search {
+  width: 0.6rem;
+  height: 0.34rem;
+  background-color: #006699;
+  border-color: #006699;
+  border-radius: 0 0.06rem 0.06rem 0;
 }
 #main #nav {
   padding: .1rem;
@@ -140,43 +187,10 @@ body {
 #main #manColumn .titile,
 #main #exercise .titile,
 #main #MsColumn .titile {
-  width: 100%;
+  display: block;
 }
 #main #manColumn .titile img,
 #main #exercise .titile img,
 #main #MsColumn .titile img {
-  width: 100%;
-}
-#main #manColumn .content,
-#main #exercise .content,
-#main #MsColumn .content {
-  width: 100%;
-}
-#main #manColumn .content ul,
-#main #exercise .content ul,
-#main #MsColumn .content ul {
-  width: 100%;
-  overflow: hidden;
-}
-#main #manColumn .content ul li,
-#main #exercise .content ul li,
-#main #MsColumn .content ul li {
-  width: 50%;
-  float: left;
-}
-#main #manColumn .content ul li:nth-child(1),
-#main #exercise .content ul li:nth-child(1),
-#main #MsColumn .content ul li:nth-child(1) {
-  border: 1px solid #ccc;
-}
-#main #manColumn .content ul li a.product,
-#main #exercise .content ul li a.product,
-#main #MsColumn .content ul li a.product {
-  display: block;
-  text-align: center;
-}
-#main #manColumn .content ul li a.product img,
-#main #exercise .content ul li a.product img,
-#main #MsColumn .content ul li a.product img {
   width: 100%;
 }

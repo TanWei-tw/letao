@@ -46,40 +46,91 @@ body {
   line-height: .45rem;
   text-align: center;
   position: absolute;
-  right: .1rem;
+  right: 0px;
+  width: 45px;
+  height: 45px;
 }
-#footer {
-  width: 100vw;
-  height: .45rem;
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  z-index: 999;
-  background-color: #006699;
-}
-#footer a {
-  width: 25%;
-  text-align: center;
-  display: block;
-  color: #fff;
-  padding-top: .085rem;
-  padding-bottom: .085rem;
-}
-#footer a span {
-  display: block;
-}
-#header a.fa-arrow-left {
+#header .fa-arrow-left {
   position: absolute;
-  left: .15rem;
+  left: 0px;
   line-height: .45rem;
+  width: 45px;
+  height: 45px;
+  text-align: center;
 }
 #header form {
-  padding-top: .02rem;
-  overflow: hidden;
+  padding-top: .03rem;
   width: 100%;
 }
 #header input {
-  border-radius: .05rem;
+  border-radius: .1rem;
+  width: 100%;
+  margin: 0;
+}
+#footer {
+  width: 100vw;
+  height: 0.45rem;
+  background-color: #006699;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25vw;
+}
+#footer ul li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0.085rem;
+}
+#footer ul li a span {
+  display: block;
+}
+#main {
+  display: flex;
+}
+#main .category-left {
+  width: .8rem;
+  position: relative;
+}
+#main .category-left ul {
+  min-height: 5.78rem;
+}
+#main .category-left ul li.active a {
+  background-color: #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#main .category-left ul li a {
+  height: .45rem;
+  text-align: center;
+  display: block;
+  line-height: 45px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#main .category-right {
+  flex: 1;
+  position: relative;
+}
+#main .category-right ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .1rem;
+  min-height: 5.78rem;
+  align-content: flex-start;
+}
+#main .category-right ul li {
+  width: 33%;
+}
+#main .category-right ul li a {
+  display: block;
+  text-align: center;
+}
+#main .category-right ul li a img {
   width: 100%;
 }
