@@ -19,7 +19,6 @@ body {
 }
 #main {
   height: 100%;
-  overflow: hidden;
   position: relative;
 }
 #header {
@@ -58,6 +57,14 @@ body {
   width: 45px;
   height: 45px;
   text-align: center;
+}
+#header .fa-home {
+  line-height: .45rem;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  width: 45px;
+  height: 45px;
 }
 #header form {
   padding-top: .03rem;
@@ -129,4 +136,11 @@ body {
 }
 .product-box ul li a.product img {
   width: 100%;
+}
+.product-box ul li a .product-name {
+  height: .4rem;
+  overflow: hidden;
+}
+.product-box ul li a p span {
+  color: red;
 }

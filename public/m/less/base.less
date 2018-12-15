@@ -21,7 +21,7 @@ body{
 #main{
     
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 #header{
@@ -61,6 +61,14 @@ body{
         width: 45px;
         height: 45px;
         text-align: center;
+    }
+    .fa-home{
+        line-height: .45rem;
+        text-align: center;
+        position: absolute;
+        right: 0px;
+        width: 45px;
+        height: 45px;
     }
     form{
      padding-top: .03rem;
@@ -131,14 +139,26 @@ body{
             &:nth-child(1){
                 border: 1px solid #ccc;
             }
-            a.product{
-            display:block;
-             text-align: center;
-           
-             img{
-                 width: 100%;
-             }
+            a{
+                &.product{
+                    display:block;
+                     text-align: center;
+                   
+                     img{
+                         width: 100%;
+                     }
+                    }
+                    .product-name{
+                    height: .4rem;
+                    overflow: hidden;
+                    }
+                    p{
+                        span{
+                            color:red;
+                        }
+                    }
             }
+        
         }
     }
    }

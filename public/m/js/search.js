@@ -3,9 +3,6 @@ $(function () {
     $('.btn-search').on('tap', function () {
         // 2. 获取输入框输入的内容
         var search = $('.input-search').val();
-        // 3. 对象输入内容进行非空判断
-        // 空格也是不合法的把首尾空格去掉search.trim()
-        // !取反!false == true  !true == false
         if (!search.trim()) {
             alert('请输入要搜索的商品');
             return;
@@ -15,7 +12,7 @@ $(function () {
         console.log(historyData);
 
         // 5. 往本地存储的数组中添加值
-        // 5.1 添加之前要判断当前输入值在数组中是否存在
+      
         if (historyData.indexOf(search) != -1) {
             historyData.splice(historyData.indexOf(search), 1);
         }
