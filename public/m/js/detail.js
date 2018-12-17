@@ -29,7 +29,8 @@ $(function() {
             });
             mui('.mui-numbox').numbox();
             $('.btn-size').on('tap', function() {
-                $(this).addClass('active').siblings().removeClass('active');
+                $(this).addClass('mui-btn-warning').siblings().removeClass('mui-btn-warning');
+                // $(this).addClass('active').siblings().removeClass('active');
             });
         }
     });
@@ -38,7 +39,7 @@ $(function() {
     // 1. 给加入购车按钮添加点击事件
     $('.btn-add-cart').on('tap', function() {
         // 2. 获取当前选择尺码和数量信息
-        var size = $('.btn-size.active').data('size');
+        var size = $('.btn-size.mui-btn-warning').data('size');
         console.log(size);
         
         // 3. 判断如果尺码没有选择 提示用户选择尺码
@@ -54,6 +55,7 @@ $(function() {
             mui.toast('请选择数量！', { duration: 3000, type: 'div' });
             return false;
         }
+       
         // 6. 调用加入购物车的API去加入购车
         $.ajax({
         		url:'/cart/addCart',
@@ -64,15 +66,18 @@ $(function() {
                     console.log(data);
                     
         			if(data.success){
-        				mui.confirm('加入购物车成功！ 是否要去购物车查看?', 'hello 单身狗', ['去看','发呆','不看'], function(e){
+        				mui.confirm('加入购物车成功！ 是否要去购物车查看?', 'hello 单身狗', ['去看','傻逼','不看'], function(e){
         					// 获取当前用户点击了左边的还是右边
         					console.log(e);
         					if(e.index == 0){
+                                location="cart.html"
         					}else{
         						mui.toast('你继续加一件就可以脱离单身了！', { duration: 3000, type: 'div' });
         					}
         				});
-        			}
+        			}else{
+                        location="login.html?retrunURL="+location.href;
+                    }
         		}
         })
     });

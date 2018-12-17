@@ -30,6 +30,11 @@ $(function () {
     console.log(sort, ranking);
     sort = sort == 1 ? 2 : 1;
     $(this).data('sort', sort);
+    if($(this).data('sort')==1){
+      $(this).find('i').removeClass('fa fa-angle-down').addClass('fa fa-angle-up');
+    }else{
+      $(this).find('i').removeClass('fa fa-angle-up').addClass('fa fa-angle-down');
+    }
     params = {
         page: 1,
         pageSize: 4,

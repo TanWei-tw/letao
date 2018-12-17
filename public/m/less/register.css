@@ -21,6 +21,10 @@ body {
   height: 100%;
   position: relative;
 }
+input {
+  font-size: .14rem;
+  background-color: #fff;
+}
 #header {
   background-color: #006699;
   height: .45rem;
@@ -144,40 +148,15 @@ body {
 .product-box ul li a p span {
   color: red;
 }
-#footer {
-  background-color: #ccc;
+#main .mui-input-row .verification-code {
+  position: absolute;
+  right: 0px;
+  width: auto;
 }
-#footer ul {
-  display: flex;
+#main .mui-button-row {
+  padding: 5px;
 }
-#footer ul li {
-  flex: 1;
-  width: 100%;
-  padding: .08rem;
-}
-#footer ul li button {
-  width: 100%;
-}
-#footer ul li:first-child {
-  width: .625rem;
-  flex: none;
-}
-#footer ul li:first-child a {
-  color: #000;
-  font-size: .2rem;
+#main .mui-button-row .btn-register {
   display: block;
-  text-align: center;
-}
-#main #productInfo ul .mui-table-view-cell .comodity-name {
-  color: #000;
-  font-weight: bold;
-}
-#main #productInfo ul .mui-table-view-cell .commodity-price {
-  color: red;
-}
-#main #productInfo ul li.product-size {
-  line-height: .38rem;
-}
-#main #productInfo ul li.product-size .btn-size {
-  padding-top: .05rem;
+  width: 100%;
 }

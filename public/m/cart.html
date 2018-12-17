@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/cart.less">
+    <script src="lib/less/less.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部结构 -->
+    <header id="header">
+        <a href="javascript:history.back()" class="fa fa-arrow-left"></a>
+        <h4>购物车</h4>
+        <a href="search.html" class="fa fa-refresh"></a>
+    </header>
+
+    <main id="main">
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view">
+                    <!-- <li class="mui-table-view-cell mui-media">
+                                            <a href="javascript:;">
+                                                <div class="mui-pull-left mui-checkbox mui-left product-left">
+                                                        <img class="mui-media-object " src="images/user.jpg">
+                                                        <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                                                </div>
+                                                <div class="mui-media-body product-right ">
+                                                  <p class="product-name">匡威三星标1970s converse复刻142334c 144757c三星标黑色高帮</p>
+                                                   <p class="product-pic">¥<span>499.1</span>¥<del>999.1</del></p>
+                                                   <div class="product-params">
+                                                        <div class="product-size">
+                                                         鞋码: <span>50</span>
+                                                        </div>
+                                                        <div class="product-num">
+                                                            x <span>1</span>双
+                                                        </font></font></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li> -->
+
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <section id="amount">
+        <div class="total">
+            订单总额: ¥<span>499.1</span>
+        </div>
+        <button type="button" class="mui-btn mui-btn-danger">生成订单</button>
+    </section>
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html" class="fa fa-home">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="category.html" class="fa fa-bars">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="fa fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html" class="fa fa-user">
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/html" id="cartListTpl">
+        {{if data.length > 0}}
+         {{each data value}}
+      <li class="mui-table-view-cell mui-media">
+      <a href="javascript:;">
+        <div class="mui-pull-left mui-checkbox mui-left product-left">
+                <img class="mui-media-object " src="{{value.pic[0].picAddr}}">
+                <input name="checkbox1" value="Item 1" type="checkbox" checked>
+       
+        </div>
+    
+        <div class="mui-media-body product-right ">
+          <p class="product-name">{{value.proName}}</p>
+           <p class="product-pic">¥<span>{{value.price}}</span>¥<del>{{value.oldPrice}}</del></p>
+           <div class="product-params">
+                <div class="product-size">
+                 鞋码: <span>{{value.size}}</span>
+                </div>
+                <div class="product-num">
+                    x <span>{{value.num}}</span>双
+                </font></font></div>
+            </div>
+        </div>
+    </a>
+</li>
+{{/each}}
+{{else}}
+<p>你的购物车没有东西</p>
+{{/if}}
+
+</script>
+</body>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/cart.js"></script>
+
+</html>
